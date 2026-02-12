@@ -1,0 +1,12 @@
+{% macro user_card(name, email) %}
+<div class="user-card">
+    <h3>{{ name }}</h3>
+    <p>{{ email }}</p>
+</div>
+{% endmacro %}
+
+{% macro alert(message, type="info") %}
+<div class="alert alert-{{ type }}">
+    {{ message }}
+</div>
+{% endmacro %}

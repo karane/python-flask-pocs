@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Filters - Flask Templates POC{% endblock %}
+
+{% block content %}
+<h1>Jinja2 Filters</h1>
+
+<h2>Built-in Filters</h2>
+<ul>
+    <li>upper: {{ text|upper }}</li>
+    <li>lower: {{ text|lower }}</li>
+    <li>capitalize: {{ text|capitalize }}</li>
+    <li>title: {{ text|title }}</li>
+    <li>length: {{ items|length }}</li>
+    <li>join: {{ items|join(", ") }}</li>
+    <li>default: {{ missing|default("N/A") }}</li>
+    <li>truncate: {{ long_text|truncate(30) }}</li>
+    <li>reverse: {{ text|reverse }}</li>
+</ul>
+
+<h2>Custom Filter</h2>
+<ul>
+    <li>reverse_words: {{ text|reverse_words }}</li>
+</ul>
+{% endblock %}

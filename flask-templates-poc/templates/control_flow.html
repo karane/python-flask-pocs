@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Control Flow - Flask Templates POC{% endblock %}
+
+{% block content %}
+<h1>Control Flow</h1>
+
+<h2>If / Else</h2>
+{% if logged_in %}
+    <p>Welcome back, {{ username }}!</p>
+{% else %}
+    <p>Please log in.</p>
+{% endif %}
+
+<h2>For Loop</h2>
+<ul>
+{% for item in items %}
+    <li>{{ loop.index }}. {{ item }}</li>
+{% else %}
+    <li>No items found.</li>
+{% endfor %}
+</ul>
+
+<h2>Loop Metadata</h2>
+<ul>
+{% for item in items %}
+    <li>
+        {{ item }} -
+        first: {{ loop.first }},
+        last: {{ loop.last }},
+        index0: {{ loop.index0 }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

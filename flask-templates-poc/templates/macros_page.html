@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from "macros.html" import user_card, alert %}
+
+{% block title %}Macros - Flask Templates POC{% endblock %}
+
+{% block content %}
+<h1>Jinja2 Macros</h1>
+
+<h2>User Cards</h2>
+{% for user in users %}
+    {{ user_card(user.name, user.email) }}
+{% endfor %}
+
+<h2>Alerts</h2>
+{{ alert("This is an info alert.") }}
+{{ alert("Operation successful!", type="success") }}
+{{ alert("Something went wrong.", type="error") }}
+{% endblock %}

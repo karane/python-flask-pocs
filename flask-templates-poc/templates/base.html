@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Flask Templates POC{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/inheritance">Inheritance</a> |
+        <a href="/filters">Filters</a> |
+        <a href="/macros">Macros</a> |
+        <a href="/control-flow">Control Flow</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+    <hr>
+    <footer>{% block footer %}Flask Templates POC{% endblock %}</footer>
+</body>
+</html>
