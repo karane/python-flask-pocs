@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}JavaScript - Static Files POC{% endblock %}
+
+{% block content %}
+<h1>Serving JavaScript</h1>
+<div class="card">
+    <p>Click the button to verify JavaScript is loaded and working:</p>
+    <button id="demo-btn">Click Me</button>
+    <p id="js-output"></p>
+</div>
+<div class="card">
+    <p>JS served from: <code>{{ url_for('static', filename='js/app.js') }}</code></p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

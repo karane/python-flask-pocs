@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Static Files POC{% endblock %}
+
+{% block content %}
+<h1>Static Files POC</h1>
+<div class="card">
+    <h2>url_for examples</h2>
+    <ul>
+        <li>CSS: <code>{{ url_for('static', filename='css/style.css') }}</code></li>
+        <li>JS: <code>{{ url_for('static', filename='js/app.js') }}</code></li>
+        <li>Image: <code>{{ url_for('static', filename='images/flask-logo.svg') }}</code></li>
+    </ul>
+</div>
+<div class="card">
+    <h2>What this POC demonstrates</h2>
+    <ul>
+        <li>Serving CSS from <code>/static/css/</code></li>
+        <li>Serving JS from <code>/static/js/</code></li>
+        <li>Serving images from <code>/static/images/</code></li>
+        <li>Using <code>url_for('static', filename=...)</code> to generate URLs</li>
+        <li>Using <code>url_for('route_name')</code> for navigation links</li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Image - Static Files POC{% endblock %}
+
+{% block content %}
+<h1>Serving Images</h1>
+<div class="card">
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/flask-logo.svg') }}" alt="Flask Logo">
+    </div>
+    <p>Image served from: <code>{{ url_for('static', filename='images/flask-logo.svg') }}</code></p>
+</div>
+{% endblock %}
